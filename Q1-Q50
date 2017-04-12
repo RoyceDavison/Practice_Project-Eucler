@@ -1,7 +1,7 @@
+	Question 1:/*Question_1: Find the sum of all the multiples of 3 or 5 below 1000.
+		 * */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*Question_1: Find the sum of all the multiples of 3 or 5 below 1000.
-		 * */
 		int sum = 0;
 		int n = 3;
 		while(n<1000){
@@ -11,6 +11,32 @@
 			n++;
 		}
 		System.out.print(sum);
+		}
+	
+	Question 2: 
+	/*Each new term in the Fibonacci sequence is generated 
+		 * by adding the previous two terms. 
+		 * By starting with 1 and 2, the first 10 terms will be:
+			1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+		By considering the terms in the Fibonacci sequence 
+		whose values do not exceed four million, 
+		find the sum of the even-valued terms.
+		 * */
+	public class Tester {
+	public static void main(String[] args) {	
+		long result = 0;
+		long[] array_fib = new long[200];//100 is size of the array I have tried 200 turn out 100 is enough
+		array_fib[0] =1;
+		array_fib[1] =1;
+		for(int i = 2; i<100; i++){
+			array_fib[i]= array_fib[i-1]+array_fib[i-2];
+		}
+		for (long i:array_fib){
+			if(i%2==0 && result<=4000000)
+			result+=i;
+		}		
+		System.out.println(result); //4613732
+		}
 		}
     
     
