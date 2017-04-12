@@ -38,5 +38,10 @@
 		System.out.println(result); //4613732
 		}
 		}
+I have tried to use recursive call calculating the fibonacci number, it turned out waste lots of time.
+	public int fib_num(int n){
+		if(n<=1) return 1;
+		if(n == 2) return 2;
+		return fib_num(n-2)+fib_num(n-1);}
     
     
